@@ -24,7 +24,7 @@ module.exports = {
 		path: path.join(__dirname, 'dist'),
 		filename: '[name].js',
 		chunkFilename: '[name].chunk.js',
-		publicPath: '/durandal-webpack/'
+		publicPath: '/durandal-webpack/dist/'
 	},
 
 	// Custom plugins
