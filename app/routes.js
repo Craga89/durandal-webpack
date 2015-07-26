@@ -13,22 +13,6 @@ module.exports = [
 		},
 		nav: true
 	},
-	{
-		route: 'dialogs',
-		title: 'Dialogs',
-		moduleId: function() {
-			return require('viewModels/dialogs/dialogs');
-		},
-		nav: true
-	},
-	{
-		route: 'widgets',
-		title: 'Widgets',
-		moduleId: function() {
-			return require('viewModels/widgets/widgets');
-		},
-		nav: true
-	},
 
 	// An async route, which lets us define certain "Code Splitting" points
 	// which shouldn't be distributed in the main app.js file, but bundled
@@ -44,6 +28,24 @@ module.exports = [
 			require(['viewModels/router/index'], function(module) {
 				cb(null, module);
 			});
+		},
+		nav: true
+	},
+
+	{
+		route: 'dialogs',
+		title: 'Dialogs',
+		moduleId: function() {
+			return require('viewModels/dialogs/dialogs');
+		},
+		nav: true
+	},
+	
+	{
+		route: 'widgets',
+		title: 'Widgets',
+		moduleId: function() {
+			return require('viewModels/widgets/widgets');
 		},
 		nav: true
 	}

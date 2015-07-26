@@ -11737,22 +11737,6 @@
 			},
 			nav: true
 		},
-		{
-			route: 'dialogs',
-			title: 'Dialogs',
-			moduleId: function() {
-				return __webpack_require__(31);
-			},
-			nav: true
-		},
-		{
-			route: 'widgets',
-			title: 'Widgets',
-			moduleId: function() {
-				return __webpack_require__(38);
-			},
-			nav: true
-		},
 
 		// An async route, which lets us define certain "Code Splitting" points
 		// which shouldn't be distributed in the main app.js file, but bundled
@@ -11769,6 +11753,24 @@
 					cb(null, module);
 				}.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));
 	/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(15)(module)))});
+			},
+			nav: true
+		},
+
+		{
+			route: 'dialogs',
+			title: 'Dialogs',
+			moduleId: function() {
+				return __webpack_require__(31);
+			},
+			nav: true
+		},
+		
+		{
+			route: 'widgets',
+			title: 'Widgets',
+			moduleId: function() {
+				return __webpack_require__(38);
 			},
 			nav: true
 		}
@@ -11969,7 +11971,7 @@
 /* 41 */
 /***/ function(module, exports) {
 
-	module.exports = "<section id=\"about\">\n\t<header><h3>What is this?</h3></header>\n\t<p>\n\t\tThis is a sample project that demonstrates the use of Webpack with Durandal together to bundle your SPA.\n\t</p>\n\t<br />\n\n\t<article>\n\t\t<header><h4>Why would I use it?</h4></header>\n\t\t<p>\n\t\t\tDurandal is a SPA framework\n\t\t\tbuilt atop the popular Require.js specification, allowing users to modularise their code and asynchronously\n\t\t\tfetch their dependenices on request.\n\t\t</p>\n\t\t<p>\n\t\t\tUtilising Webpack in place of Require.js provides many benefits, including allowing us to smarly bundle our application\n\t\t\tinto distinct chunks, as opposed to completely individual files. This is great for caching, and can give a good boost\n\t\t\tto performance, especially on high latency networks.\n\t\t</p>\n\t\t<p>\n\t\t\tThere are plenty of other benefits, including transpilation support, CSS bundling and more!\n\t\t</p>\n\t</article>\n\t<br />\n\n\t<article>\n\t\t<header><h4>How do you do it?</h4></header>\n\n\t\t<p>\n\t\t\tThis project is supported by an in-depth Blog series title \"Durandal + Webpack\", which should answer any questions\n\t\t\tyou have about how this was achieved. Make sure to check-out the source for a technical view of what's going on.\n\t\t</p>\n\n\t\t<a class=\"btn btn-primary\" href=\"http://blog.craigsworks.com/durandal-and-webpack-introduction\">\n\t\t\t<span class=\"fa fa-book\"></span>\n\t\t\tRead the Guide\n\t\t</a>\n\t\t<a class=\"btn btn-default\" href=\"http://bgithub.com/Craga89/durandal-webpack\">\n\t\t\t<span class=\"fa fa-github\"></span>\n\t\t\tView the Source\n\t\t</a>\n\n\t</article>\n\n</section>";
+	module.exports = "<section id=\"about\">\n\t<header><h3>What is this?</h3></header>\n\t<p>\n\t\tThis is a sample project that demonstrates the use of Webpack with Durandal together to bundle your SPA.\n\t</p>\n\t<br />\n\n\t<article>\n\t\t<header><h4>Why would I use it?</h4></header>\n\t\t<p>\n\t\t\tDurandal is a SPA framework\n\t\t\tbuilt atop the popular Require.js specification, allowing users to modularise their code and asynchronously\n\t\t\tfetch their dependenices on request.\n\t\t</p>\n\t\t<p>\n\t\t\tUtilising Webpack in place of Require.js provides many benefits, including allowing us to smarly bundle our application\n\t\t\tinto distinct chunks, as opposed to completely individual files. This is great for caching, and can give a good boost\n\t\t\tto performance, especially on high latency networks.\n\t\t</p>\n\t\t<p>\n\t\t\tThere are plenty of other benefits, including transpilation support, CSS bundling and more!\n\t\t</p>\n\t</article>\n\t<br />\n\n\t<article>\n\t\t<header><h4>How do you do it?</h4></header>\n\n\t\t<p>\n\t\t\tThis project is supported by an in-depth Blog series title \"Durandal + Webpack\", which should answer any questions\n\t\t\tyou have about how this was achieved. Make sure to check-out the source for a technical view of what's going on.\n\t\t</p>\n\n\t\t<a class=\"btn btn-primary\" href=\"http://blog.craigsworks.com/durandal-and-webpack-introduction\">\n\t\t\t<span class=\"fa fa-book\"></span>\n\t\t\tRead the Guide\n\t\t</a>\n\t\t<a class=\"btn btn-default\" href=\"http://github.com/Craga89/durandal-webpack\">\n\t\t\t<span class=\"fa fa-github\"></span>\n\t\t\tView the Source\n\t\t</a>\n\n\t</article>\n\n</section>";
 
 /***/ },
 /* 42 */
