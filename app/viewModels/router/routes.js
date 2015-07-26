@@ -2,7 +2,9 @@ module.exports = [
 	{
 		route: '', 
 		title: 'What?',
-		moduleId: require('./viewModels/how/how'),
+		moduleId: function() {
+			return require('./viewModels/how/how');
+		},
 		nav: true
 	},
 

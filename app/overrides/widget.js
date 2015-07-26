@@ -1,4 +1,8 @@
 var widget = require('plugins/widget');
+
+// Import the widgets index module, which should export an object
+// whose keys are the names of the Widgets to register and the
+// values the Widget modules
 var widgets = require('widgets/index');
 
 // Widgets usually require a `moduleId` to resolve. We'll override this so

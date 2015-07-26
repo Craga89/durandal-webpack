@@ -1,24 +1,31 @@
 var system = require('durandal/system');
 
-// Allow actual modules to passed through instead of IDs, which simply
-// returns a resolved promise containing the given module definition
 var acquire = system.acquire;
 system.acquire = function(moduleIdOrModule) {
-	// If the moduleId is a callback, allow async operations by executing
-	// it, and passing along a callback to execute when async op is finished
-	if(moduleIdOrModule instanceof Function) {
-		return system.defer(function(dfd) {
-			moduleIdOrModule(function(err, module) {
-				if(err) { dfd.reject(err); }
-				dfd.resolve(module);
-			});
-		});
-	}
+	var moduleType = typeof moduleIdOrModule;
 
-	// If the moduleId is actually an object, simply resolve with it
-	else if(typeof moduleIdOrModule === 'object') {
+	if(moduleType !== 'string') {
 		return system.defer(function(dfd) {
-			dfd.resolve(moduleIdOrModule);
+			// If the moduleId is a funcction...
+			if(moduleIdOrModule instanceof Function) {
+				// Execute the function, passing a callback that should be 
+				// called when the (possibly) async operation is finished
+				var result = moduleIdOrModule(function(err, module) {
+					if(err) { dfd.reject(err); }
+					dfd.resolve(module);
+				});
+
+				// Also allow shorthand `return` from the funcction, which 
+				// resolves the Promise with whatever was immediately returned
+				if(result !== undefined) {
+					dfd.resolve(result);
+				}
+			}
+
+			// If the moduleId is actually an object, simply resolve with it
+			else {
+				dfd.resolve(moduleIdOrModule);
+			}
 		});
 	}
 

@@ -8,19 +8,25 @@ module.exports = [
 	{
 		route: '', 
 		title: 'About',
-		moduleId: require('viewModels/about/about'),
+		moduleId: function() {
+			return require('viewModels/about/about');
+		},
 		nav: true
 	},
 	{
 		route: 'dialogs',
 		title: 'Dailogs',
-		moduleId: require('viewModels/dialogs/dialogs'),
+		moduleId: function() {
+			return require('viewModels/dialogs/dialogs');
+		},
 		nav: true
 	},
 	{
 		route: 'widgets',
 		title: 'Widgets',
-		moduleId: require('viewModels/widgets/widgets'),
+		moduleId: function() {
+			return require('viewModels/widgets/widgets');
+		},
 		nav: true
 	},
 

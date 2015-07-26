@@ -1,12 +1,11 @@
 var system = require('durandal/system');
 var composition = require('durandal/composition');
 
-// Allow passing of a bare `function` as `model` property in a `compose` binding, which will
-// resolve it via `system.resolveObject` just like a dynamically resolved module. This will
-// only happen however if the function has a valid `__moduleId__` property as assigned by `system`.
 var compose = composition.compose;
 composition.compose = function(element, settings) {
-	if(settings.model instanceof Function) {
+	// If the `model` isn't a `moduleId` string, assume it's the module
+	// itself and resolve it using the `system` module
+	if('string' !== typeof settings.model) {
 		settings.model = system.resolveObject(settings.model);
 	}
 
