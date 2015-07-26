@@ -15,7 +15,7 @@ module.exports = [
 	},
 	{
 		route: 'dialogs',
-		title: 'Dailogs',
+		title: 'Dialogs',
 		moduleId: function() {
 			return require('viewModels/dialogs/dialogs');
 		},

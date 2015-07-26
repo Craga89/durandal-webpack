@@ -11739,7 +11739,7 @@
 		},
 		{
 			route: 'dialogs',
-			title: 'Dailogs',
+			title: 'Dialogs',
 			moduleId: function() {
 				return __webpack_require__(31);
 			},
