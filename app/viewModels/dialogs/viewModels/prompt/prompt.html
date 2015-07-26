@@ -1,0 +1,24 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<!-- ko if: canClose -->
+				<a role="button" title="Close Dialog" class="close" data-bind="click: close">
+					&times;
+				</a>
+			<!-- /ko-->
+
+			<h4 class="modal-title">Prompt</h4>
+		</div>
+
+		<div class="modal-body">
+			<p class="message" data-bind="text: message"></p>
+
+			<input type="text" class="form-control" data-bind="value: text" />
+		</div>
+
+		<div class="modal-footer">
+			<a class="btn btn-primary" data-bind="click: function() { selectOption(true); }">OK</a>
+			<a class="btn btn-default" data-bind="click: close">Cancel</a>
+		</div>
+	</div>
+</div>

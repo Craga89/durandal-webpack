@@ -1,0 +1,30 @@
+<section id="dialogs">
+	<header><h3>Dialogs</h3></header>
+	<p>
+		Dialogs can be easily integrate into the Webpack build by referencing the ViewModel
+		as a direct dependency, and passing it to <code>dialog.show</code> as the first
+		parameter, instead of the usual <code>moduleId</code>.
+	</p>
+	<br />
+
+	<article>
+		<header><h4>Examples</h4></header>
+		<p>
+			<a class="btn btn-danger" data-bind="click: alert">Alert</a>
+			<a class="btn btn-warning" data-bind="click: alert">Confirm</a>
+			<a class="btn btn-info" data-bind="click: prompt">Prompt</a>
+		</p>
+	</article>
+	<br />
+
+	<article>
+		<header><h4>Asynchronous</h4></header>
+		<p>
+			We can also fetch dialogs on request using Webpacks <code>require.ensure</code> Code Splitting
+			functionality!
+		</p>
+		<p>
+			<a class="btn btn-danger" data-bind="click: hello">Alert</a>
+		</p>
+	</article>
+</div>

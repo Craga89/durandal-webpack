@@ -1,0 +1,33 @@
+{
+  "name": "durandal-webpack",
+  "version": "1.0.0",
+  "description": "Durandal + Webpack = Awesome",
+  "main": "index.js",
+  "dependencies": {
+    "html-loader": "^0.3.0",
+    "jquery": "^2.1.4",
+    "knockout": "^3.3.0"
+  },
+  "devDependencies": {
+    "html-loader": "^0.3.0",
+    "webpack": "^1.10.5"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Craga89/durandal-webpack.git"
+  },
+  "keywords": [
+    "durandal",
+    "webpack"
+  ],
+  "author": "Craig Michael Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Craga89/durandal-webpack/issues"
+  },
+  "homepage": "https://github.com/Craga89/durandal-webpack#readme"
+}

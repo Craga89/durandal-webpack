@@ -1,0 +1,28 @@
+<main id="shell">
+	<div class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
+					<i class="icon-home"></i>
+					<span>Durandal + Webpack</span>
+				</a>
+			</div>
+
+			<ul class="nav navbar-nav" data-bind="foreach: router.navigationModel">
+				<li data-bind="css: { active: isActive }">
+					<a data-bind="attr: { href: hash }, html: title"></a>
+				</li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="http://blog.craigsworks.com/durandal-and-webpack-introduction" target="_blank">Read the article</a></li>
+			</ul>
+
+			<div class="loader navbar-right" data-bind="css: { active: router.isNavigating }">
+				<i class="icon-spinner icon-2x icon-spin"></i>
+			</div>
+		</div>
+	</div>
+
+	<div id="page" class="container" data-bind="router: {}"></div>
+</main>

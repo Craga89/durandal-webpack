@@ -1,0 +1,24 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<!-- ko if: canClose -->
+				<a role="button" title="Close Dialog" class="close" data-bind="click: close">
+					&times;
+				</a>
+			<!-- /ko-->
+
+			<h4 class="modal-title">Hello world!</h4>
+		</div>
+
+		<div class="modal-body">
+			<p>
+				I was loaded in a separate network request to the rest of the application. I'm not
+				opened that much, so it's probably for the best... :(
+			</p>
+		</div>
+
+		<div class="modal-footer">
+			<a class="btn btn-default" data-bind="click: close">Bye!</a>
+		</div>
+	</div>
+</div>

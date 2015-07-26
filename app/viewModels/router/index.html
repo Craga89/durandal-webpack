@@ -1,0 +1,34 @@
+<section id="async">
+	<header><h3>Router</h3></header>
+	<p>
+		We can interface nicely with the <code>router</code> component, too. You're seeing that in action now!
+	</p>
+	<br />
+
+	<article>
+		<header><h4>How?</h4></header>
+		<p>
+			Typically Durandals <code>router</code> module requires you to specify a <code>moduleId</code>
+			for each route.
+		</p>
+
+		<p>
+			To allow Webpack to know these are actual dependencies, we instead set each
+			<code>moduleId</code> to the actual ViewModel module instance instead, and override the core
+			Durandal <code>composition</code> and <code>system</code> modules to handle it.
+		</p>
+	</article>
+	<br />
+
+	<article>
+		<header><h4>Asynchronous Routes!</h4></header>
+
+		<ul class="nav nav-tabs" data-bind="foreach: router.navigationModel">
+			<li data-bind="css: { active: isActive }">
+				<a data-bind="attr: { href: hash }, html: title"></a>
+			</li>
+		</ul>
+
+		<div class="container" style="padding-top: 20px;" data-bind="router: {}"></div>	
+	</article>
+</section>
