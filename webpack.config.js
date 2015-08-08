@@ -50,7 +50,6 @@ module.exports = {
 
 		modulesDirectories: [
 			'node_modules',
-			'web_components',
 			'app'
 		],
 
