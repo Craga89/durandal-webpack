@@ -2,11 +2,10 @@ var system = require('durandal/system');
 
 var acquire = system.acquire;
 system.acquire = function(moduleIdOrModule) {
-	var moduleType = typeof moduleIdOrModule;
-
-	if(moduleType !== 'string') {
+	var isModule = typeof moduleIdOrModule !== 'string' && !(moduleIdOrModule instanceof Array);
+	if(isModule) {
 		return system.defer(function(dfd) {
-			// If the moduleId is a funcction...
+			// If the moduleId is a function...
 			if(moduleIdOrModule instanceof Function) {
 				// Execute the function, passing a callback that should be 
 				// called when the (possibly) async operation is finished
