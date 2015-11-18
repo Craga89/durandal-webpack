@@ -5,7 +5,7 @@ This is a sample project that demonstrates the use of Webpack with Durandal toge
 ## Quickstart
 Install the global dependencies with
 ```
-npm install -g webpack-dev-server
+npm install -g webpack webpack-dev-server
 ```
 Install the package dependencies with
 ```
